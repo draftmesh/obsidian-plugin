@@ -23,6 +23,276 @@
   height: var(--icon-xs);
 }
 
+/* Share markdown modal */
+.modal.draftmesh-share-modal-shell {
+  width: min(480px, 92vw);
+}
+
+.modal.draftmesh-share-modal-shell--mobile {
+  width: 90vw !important;
+  max-width: 480px !important;
+}
+
+.draftmesh-share-modal__intro {
+  margin: 0 0 var(--size-2-3);
+  color: var(--text-muted);
+  font-size: var(--font-ui-small);
+  line-height: 1.4;
+}
+
+.draftmesh-share-modal__empty {
+  margin: 0;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.draftmesh-share-modal__hint {
+  margin: var(--size-2-2) 0 0;
+  color: var(--text-muted);
+  font-size: var(--font-ui-smaller);
+  line-height: 1.35;
+}
+
+.draftmesh-share-modal__section {
+  margin-top: var(--size-4-3);
+}
+
+.draftmesh-share-modal__settings {
+  margin-top: var(--size-2-2);
+}
+
+.draftmesh-share-modal__settings .setting-item {
+  border-top: none;
+  padding: var(--size-2-1) 0;
+  gap: var(--size-2-2);
+  background-color: transparent;
+}
+
+.draftmesh-share-modal__settings .setting-item:first-of-type {
+  padding-top: 0;
+}
+
+.draftmesh-share-modal__settings .setting-item-info {
+  gap: 1px;
+}
+
+.draftmesh-share-modal__settings .setting-item-name {
+  font-size: var(--font-ui-small);
+  line-height: 1.3;
+}
+
+.draftmesh-share-modal__settings .setting-item-description {
+  font-size: var(--font-ui-smaller);
+  line-height: 1.35;
+}
+
+.draftmesh-share-modal__settings .setting-item-control {
+  flex-shrink: 0;
+}
+
+.draftmesh-share-modal__settings .setting-item-control select {
+  border-radius: var(--input-radius, var(--radius-m));
+}
+
+.draftmesh-share-modal__section-title {
+  margin: 0 0 var(--size-2-2);
+  font-size: var(--font-ui-small);
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.draftmesh-share-modal__results {
+  margin-top: var(--size-4-2);
+}
+
+.draftmesh-share-modal__results-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--size-4-2);
+  margin-bottom: var(--size-2-2);
+}
+
+.draftmesh-share-modal__results-header .draftmesh-share-modal__section-title {
+  margin: 0;
+  font-size: var(--font-ui-normal);
+  font-weight: 600;
+  color: var(--text-normal);
+}
+
+.draftmesh-share-modal__expiry-pill {
+  flex-shrink: 0;
+  padding: 2px var(--size-2-2);
+  border-radius: 999px;
+  background: var(--background-modifier-hover);
+  font-size: var(--font-ui-smaller);
+  font-weight: 500;
+  color: var(--text-muted);
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.draftmesh-share-modal__public-setting.setting-item {
+  padding: 0;
+  gap: 0;
+  background-color: transparent;
+}
+
+.draftmesh-share-modal__public-setting .setting-item-info {
+  display: none;
+}
+
+.draftmesh-share-modal__public-setting .setting-item-control {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: var(--size-2-2);
+  flex: 1 1 auto;
+  width: 100%;
+  min-width: 0;
+  background-color: transparent;
+}
+
+.draftmesh-share-modal__public-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0;
+  width: 100%;
+  background-color: transparent;
+}
+
+.draftmesh-share-modal__public-grid:has(> .draftmesh-share-modal__public-cell:only-child) {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.draftmesh-share-modal__public-cell {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--size-4-2);
+  min-width: 0;
+  width: 100%;
+  margin: 0;
+  padding: var(--size-2-1) var(--size-2-2);
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  box-sizing: border-box;
+  box-shadow: none;
+  appearance: none;
+}
+
+.draftmesh-share-modal__public-cell--link {
+  justify-content: flex-start;
+  padding-left: 0;
+  padding-right: var(--size-2-2);
+}
+
+.draftmesh-share-modal__public-cell--password {
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+  padding-right: 0;
+  padding-left: var(--size-2-2);
+  border-left: 1px solid var(--background-modifier-border);
+}
+
+.draftmesh-share-modal__public-cell--password .draftmesh-share-modal__public-cell-body {
+  align-items: flex-end;
+}
+
+.draftmesh-share-modal__public-cell:hover,
+.draftmesh-share-modal__public-cell:active,
+.draftmesh-share-modal__public-cell:focus,
+.draftmesh-share-modal__public-cell:focus-visible {
+  background: transparent;
+  box-shadow: none;
+  outline: none;
+}
+
+.draftmesh-share-modal__public-cell-icon {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  color: var(--text-muted);
+}
+
+.draftmesh-share-modal__public-cell-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.draftmesh-share-modal__public-cell-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  gap: 1px;
+  min-width: 0;
+}
+
+.draftmesh-share-modal__public-cell-label {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: var(--font-ui-small);
+  font-weight: 500;
+  color: var(--text-muted);
+  line-height: 1.2;
+}
+
+.draftmesh-share-modal__public-cell-value {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: var(--font-monospace);
+  font-size: var(--font-ui-small);
+  color: var(--text-normal);
+  line-height: 1.2;
+}
+
+.draftmesh-share-modal__public-cell--password .draftmesh-share-modal__public-cell-value {
+  flex-shrink: 0;
+  min-width: 9.5em;
+}
+
+.draftmesh-share-modal__public-cell-value.is-masked {
+  letter-spacing: 0.14em;
+}
+
+.draftmesh-share-modal__password-note {
+  margin: 0;
+  font-size: var(--font-ui-smaller);
+  line-height: 1.45;
+  color: var(--text-muted);
+}
+
+.draftmesh-share-modal__footer {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: var(--size-2-3);
+  margin-top: var(--size-4-2);
+}
+
+.draftmesh-share-modal__footer--mobile {
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.draftmesh-share-modal__footer--mobile > button {
+  min-height: 44px;
+}
+
 .draftmesh-settings .setting-item-heading .setting-item-control {
   display: flex;
   align-items: center;
