@@ -260,15 +260,6 @@
   line-height: 1.2;
 }
 
-.draftmesh-share-modal__public-cell--password .draftmesh-share-modal__public-cell-value {
-  flex-shrink: 0;
-  min-width: 9.5em;
-}
-
-.draftmesh-share-modal__public-cell-value.is-masked {
-  letter-spacing: 0.14em;
-}
-
 .draftmesh-share-modal__password-note {
   margin: 0;
   font-size: var(--font-ui-smaller);
