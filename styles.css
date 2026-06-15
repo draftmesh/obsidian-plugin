@@ -1,0 +1,1524 @@
+.nav-file-title.tree-item-self:has(> .draftmesh-share-badge) {
+  gap: var(--size-2-1);
+}
+
+.draftmesh-share-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-inline-start: auto;
+  padding-inline-start: var(--size-2-2);
+  color: var(--icon-color);
+  flex-shrink: 0;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.draftmesh-share-badge.is-shared {
+  color: var(--color-blue);
+}
+
+.draftmesh-share-badge svg {
+  width: var(--icon-xs);
+  height: var(--icon-xs);
+}
+
+.draftmesh-settings .setting-item-heading .setting-item-control {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.draftmesh-settings .draftmesh-settings-discord-link {
+  --icon-size: var(--icon-m);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  padding: 0;
+  min-width: var(--icon-m);
+  min-height: var(--icon-m);
+  background: transparent;
+  box-shadow: none;
+  line-height: 1;
+}
+
+.draftmesh-settings .draftmesh-settings-discord-link:hover,
+.draftmesh-settings .draftmesh-settings-discord-link:focus-visible {
+  background: transparent;
+}
+
+.draftmesh-settings .draftmesh-settings-discord-link svg {
+  display: block;
+  height: var(--icon-m);
+  width: auto;
+}
+
+.draftmesh-settings .setting-item.draftmesh-setting-item--stacked {
+  align-items: flex-start;
+}
+
+.draftmesh-settings .setting-item.draftmesh-setting-item--stacked .setting-item-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--size-2-1);
+  flex: 1 1 auto;
+  min-width: 0;
+  align-self: stretch;
+}
+
+.draftmesh-settings .setting-item.draftmesh-setting-item--stacked .setting-item-control {
+  align-self: flex-start;
+  flex-shrink: 0;
+  padding-block-start: 0;
+}
+
+.draftmesh-settings .setting-item .setting-item-control > button {
+  border-radius: var(--button-radius, var(--radius-m));
+}
+
+.draftmesh-settings .setting-item .setting-item-control > button.draftmesh-settings-action-button {
+  min-width: 72px;
+}
+
+.draftmesh-settings .setting-item-control.draftmesh-sync-scope-control {
+  display: flex;
+  align-items: center;
+  gap: var(--size-2-2);
+}
+
+.draftmesh-settings
+  .setting-item.draftmesh-setting-item--stacked
+  .setting-item-control.draftmesh-sync-status-control {
+  display: flex;
+  align-items: center;
+  align-self: center;
+  gap: var(--size-4-3);
+  justify-content: flex-end;
+  padding-block-start: 0;
+}
+
+.draftmesh-settings .setting-item.draftmesh-plan-row .setting-item-control {
+  gap: var(--size-4-3);
+}
+
+.draftmesh-settings .setting-item.draftmesh-account-row .setting-item-control {
+  gap: var(--size-4-3);
+}
+
+.draftmesh-settings .setting-item-control .draftmesh-sync-status-icon-button {
+  --clickable-icon-size: var(--icon-m);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  padding: 0;
+  width: var(--icon-m);
+  height: var(--icon-m);
+  background: transparent;
+  box-shadow: none;
+  line-height: 1;
+}
+
+.draftmesh-settings .setting-item-control .draftmesh-sync-status-delete:hover,
+.draftmesh-settings .setting-item-control .draftmesh-sync-status-delete:focus-visible {
+  color: var(--text-error);
+  background: transparent;
+}
+
+.draftmesh-settings .setting-item-control .draftmesh-sync-status-icon-button svg {
+  display: block;
+  width: var(--icon-m);
+  height: var(--icon-m);
+}
+
+.draftmesh-settings .setting-item-control .draftmesh-account-vaults {
+  --clickable-icon-size: var(--icon-m);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  padding: 0;
+  width: var(--icon-m);
+  height: var(--icon-m);
+  background: transparent;
+  box-shadow: none;
+  line-height: 1;
+}
+
+.draftmesh-settings .setting-item-control .draftmesh-account-vaults:hover,
+.draftmesh-settings .setting-item-control .draftmesh-account-vaults:focus-visible {
+  color: var(--text-normal);
+  background: transparent;
+}
+
+.draftmesh-settings .setting-item-control .draftmesh-account-vaults svg {
+  display: block;
+  width: var(--icon-m);
+  height: var(--icon-m);
+}
+
+.draftmesh-settings .setting-item-control .draftmesh-plan-manage {
+  --clickable-icon-size: var(--icon-m);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  padding: 0;
+  width: var(--icon-m);
+  height: var(--icon-m);
+  background: transparent;
+  box-shadow: none;
+  line-height: 1;
+}
+
+.draftmesh-settings .setting-item-control .draftmesh-plan-manage:hover,
+.draftmesh-settings .setting-item-control .draftmesh-plan-manage:focus-visible {
+  color: var(--text-normal);
+  background: transparent;
+}
+
+.draftmesh-settings .setting-item-control .draftmesh-plan-manage svg {
+  display: block;
+  width: var(--icon-m);
+  height: var(--icon-m);
+}
+
+.draftmesh-sync-scope-lock {
+  display: flex;
+  align-items: center;
+  color: var(--text-faint);
+  cursor: default;
+}
+
+.draftmesh-sync-scope-lock svg {
+  width: var(--icon-s);
+  height: var(--icon-s);
+}
+
+.draftmesh-settings .setting-item.draftmesh-setting-item--stacked .setting-item-name {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.draftmesh-settings .setting-item.draftmesh-setting-item--stacked .setting-item-description {
+  display: none;
+}
+
+.draftmesh-setting-stacked-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--size-2-1);
+  width: 100%;
+  min-width: 0;
+}
+
+.draftmesh-setting-title-row {
+  display: flex;
+  align-items: center;
+  gap: var(--size-2-2);
+  flex-wrap: wrap;
+  min-width: 0;
+  width: fit-content;
+  max-width: 100%;
+}
+
+.draftmesh-setting-title-row__label {
+  flex-shrink: 0;
+}
+
+.draftmesh-setting-stacked-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--size-2-1);
+  width: 100%;
+  min-width: 0;
+}
+
+.draftmesh-setting-desc-row {
+  display: flex;
+  align-items: center;
+  gap: var(--size-2-2);
+  flex-wrap: wrap;
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.draftmesh-info-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--size-2-2);
+  min-width: 0;
+  max-width: min(100%, 18rem);
+  padding: var(--size-2-1) var(--size-4-2);
+  border-radius: 9999px;
+  background-color: var(--background-secondary);
+}
+
+.draftmesh-info-pill--wide {
+  max-width: min(100%, 24rem);
+}
+
+.draftmesh-info-pill--compact {
+  max-width: min(100%, 9rem);
+  padding: var(--size-2-1) var(--size-2-3);
+}
+
+body.is-mobile .draftmesh-settings .draftmesh-info-pill {
+  display: none;
+}
+
+.draftmesh-info-pill.draftmesh-info-pill--unified {
+  background-color: var(--background-modifier-hover);
+  box-sizing: border-box;
+  padding: var(--size-2-2) var(--size-4-2);
+  gap: var(--size-2-2);
+}
+
+.draftmesh-info-pill.draftmesh-info-pill--unified .draftmesh-info-pill__avatar {
+  background: none;
+  background-color: transparent;
+  border-radius: 0;
+  box-shadow: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 14px;
+  min-width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  margin: 0;
+}
+
+.draftmesh-info-pill.draftmesh-info-pill--unified .draftmesh-info-pill__avatar svg {
+  width: 14px;
+  height: 14px;
+  display: block;
+}
+
+.draftmesh-info-pill.draftmesh-info-pill--unified .draftmesh-info-pill__text {
+  flex: 0 1 auto;
+  min-height: 14px;
+}
+
+.draftmesh-info-pill:not(.draftmesh-info-pill--unified) .draftmesh-info-pill__avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--background-modifier-hover);
+  flex-shrink: 0;
+  color: var(--text-muted);
+}
+
+.draftmesh-info-pill:not(.draftmesh-info-pill--unified) .draftmesh-info-pill__avatar svg {
+  width: 12px;
+  height: 12px;
+}
+
+.draftmesh-info-pill__avatar--subscribed,
+.draftmesh-info-pill.draftmesh-info-pill--unified .draftmesh-info-pill__avatar--subscribed {
+  color: var(--color-blue);
+  background: none;
+  background-color: transparent;
+}
+
+.draftmesh-info-pill__text {
+  display: inline-flex;
+  align-items: center;
+  min-width: 0;
+  min-height: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: var(--font-ui-smaller);
+  font-weight: 500;
+  line-height: 1;
+  color: var(--text-normal);
+}
+
+.draftmesh-info-pill__chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3em;
+  font-size: var(--font-ui-smaller);
+  color: var(--text-muted);
+}
+
+.draftmesh-info-pill__chip-icon {
+  display: inline-flex;
+  flex-shrink: 0;
+  color: var(--text-muted);
+}
+
+.draftmesh-info-pill__chip-icon svg {
+  width: 12px;
+  height: 12px;
+}
+
+.draftmesh-info-pill__chip-text {
+  font-size: inherit;
+  line-height: 1;
+}
+
+.draftmesh-latency-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  font-size: var(--font-ui-smaller);
+  color: var(--text-muted);
+}
+
+.draftmesh-latency-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-inline-start: 4px;
+}
+
+.draftmesh-latency-dot--online {
+  background-color: var(--text-success);
+  box-shadow:
+    0 0 0 2px color-mix(in srgb, var(--text-success) 22%, transparent),
+    0 0 8px 2px color-mix(in srgb, var(--text-success) 55%, transparent);
+}
+
+.draftmesh-latency-dot--offline {
+  background-color: color-mix(in srgb, var(--text-error) 50%, var(--text-muted));
+  box-shadow:
+    0 0 0 2px color-mix(in srgb, var(--text-error) 12%, transparent),
+    0 0 8px 2px color-mix(in srgb, var(--text-error) 25%, transparent);
+}
+
+.draftmesh-latency-dot--error {
+  background-color: var(--text-error);
+  box-shadow:
+    0 0 0 2px color-mix(in srgb, var(--text-error) 22%, transparent),
+    0 0 8px 2px color-mix(in srgb, var(--text-error) 55%, transparent);
+}
+
+.draftmesh-latency-indicator.is-error {
+  cursor: pointer;
+}
+
+.draftmesh-latency-indicator.is-error .draftmesh-latency-indicator__text {
+  color: var(--text-error);
+  max-width: min(280px, 50vw);
+  line-height: 1.35;
+  word-break: break-word;
+}
+
+.draftmesh-latency-indicator__text {
+  font-size: inherit;
+  line-height: 1;
+  color: var(--text-muted);
+}
+
+.draftmesh-latency-dot--online + .draftmesh-latency-indicator__text {
+  color: var(--text-success);
+}
+
+.draftmesh-latency-dot--offline + .draftmesh-latency-indicator__text {
+  color: color-mix(in srgb, var(--text-error) 55%, var(--text-muted));
+}
+
+.modal.draftmesh-vault-manager-modal {
+  width: min(520px, 92vw);
+}
+
+.modal.draftmesh-vault-manager-modal--mobile {
+  width: 95vw !important;
+  max-width: 500px !important;
+}
+
+.draftmesh-vault-manager__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-bottom: 12px;
+}
+
+.draftmesh-vault-manager__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  gap: 12px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.draftmesh-vault-manager--mobile .draftmesh-vault-manager__row {
+  padding: 10px 0;
+}
+
+.draftmesh-vault-manager__row-main {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+  min-width: 0;
+}
+
+.draftmesh-vault-manager__row-actions {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  gap: var(--size-2-3);
+  min-width: 0;
+}
+
+.draftmesh-vault-manager__owner-pill {
+  flex: 0 1 9rem;
+}
+
+.draftmesh-vault-manager--mobile .draftmesh-vault-manager__owner-pill {
+  max-width: 7.5rem;
+}
+
+.draftmesh-vault-manager__action-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  inline-size: 96px;
+  box-sizing: border-box;
+  min-height: 30px;
+  padding: 6px 12px;
+  background-color: var(--background-modifier-hover);
+  box-shadow: none;
+}
+
+.draftmesh-vault-manager--mobile .draftmesh-vault-manager__action-btn {
+  inline-size: 88px;
+  min-height: 34px;
+  font-size: 12px;
+}
+
+.draftmesh-vault-manager__action-btn--connect {
+  color: var(--text-normal);
+}
+
+.draftmesh-vault-manager__action-btn--connect:hover {
+  background-color: var(--background-modifier-border-hover, var(--background-modifier-border));
+  color: var(--text-normal);
+}
+
+.draftmesh-vault-manager__action-btn--connected {
+  color: var(--text-muted);
+  opacity: 0.85;
+  cursor: default;
+}
+
+.draftmesh-vault-manager__storage-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--size-4-2);
+  margin-bottom: var(--size-4-2);
+  padding-bottom: var(--size-2-3);
+  border-bottom: 1px solid var(--background-modifier-border);
+  font-size: var(--font-ui-smaller);
+}
+
+.draftmesh-vault-manager__storage-header-label {
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.draftmesh-vault-manager__storage-header-value {
+  color: var(--text-normal);
+  font-weight: 500;
+  text-align: right;
+}
+
+.draftmesh-vault-manager__storage-header-value--over {
+  color: var(--text-error);
+}
+
+.draftmesh-vault-manager__name-row {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--size-2-2);
+  line-height: 1;
+  min-width: 0;
+  flex-wrap: wrap;
+}
+
+.draftmesh-vault-manager__vault-icon {
+  display: inline-flex;
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  color: var(--text-muted);
+}
+
+.draftmesh-vault-manager__vault-icon svg {
+  width: 18px;
+  height: 18px;
+  display: block;
+}
+
+.draftmesh-vault-manager__vault-name {
+  display: inline-block;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.draftmesh-vault-manager__status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35em;
+  font-size: var(--font-ui-smaller);
+  color: var(--text-muted);
+}
+
+.draftmesh-vault-manager__status-icon {
+  display: inline-flex;
+  flex-shrink: 0;
+  width: 14px;
+  height: 14px;
+}
+
+.draftmesh-vault-manager__status-icon svg {
+  width: 14px;
+  height: 14px;
+  display: block;
+}
+
+.draftmesh-vault-manager__status--sync .draftmesh-vault-manager__status-icon,
+.draftmesh-vault-manager__status--sync .draftmesh-vault-manager__status-text {
+  color: var(--color-purple);
+}
+
+.draftmesh-vault-manager__status--sync .draftmesh-vault-manager__status-text {
+  font-weight: 500;
+}
+
+/* Auth modals (login / register) */
+.draftmesh-auth-modal {
+  padding: var(--size-4-2) 0;
+}
+
+.draftmesh-auth-modal__header {
+  margin-bottom: var(--size-4-3);
+}
+
+.draftmesh-auth-modal__title {
+  margin: 0;
+  font-size: var(--font-ui-large);
+  font-weight: 600;
+  color: var(--text-normal);
+  line-height: 1.3;
+}
+
+.draftmesh-auth-modal__subtitle {
+  margin: var(--size-2-1) 0 0;
+  font-size: var(--font-ui-small);
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.draftmesh-auth-modal__progress {
+  height: 4px;
+  margin-bottom: var(--size-4-3);
+  border-radius: 999px;
+  background-color: var(--background-modifier-border);
+  overflow: hidden;
+}
+
+.draftmesh-auth-modal__progress-bar {
+  height: 100%;
+  border-radius: 999px;
+  background-color: var(--interactive-accent);
+  transition: width 0.2s ease;
+}
+
+.draftmesh-auth-modal__alert {
+  margin: 0 0 var(--size-4-2);
+  min-height: 0;
+  font-size: var(--font-ui-small);
+  line-height: 1.4;
+}
+
+.draftmesh-auth-modal__alert--visible {
+  padding: var(--size-2-2) var(--size-4-2);
+  border-radius: var(--radius-s);
+  color: var(--text-normal);
+}
+
+.draftmesh-auth-modal__alert--visible.draftmesh-auth-modal__alert--error {
+  border-left: 3px solid var(--color-red);
+  background-color: var(--background-modifier-hover);
+}
+
+.draftmesh-auth-modal__alert--visible.draftmesh-auth-modal__alert--success {
+  border-left: 3px solid var(--color-green);
+  background-color: var(--background-modifier-hover);
+}
+
+.draftmesh-auth-modal__hint {
+  margin: 0 0 var(--size-4-2);
+  font-size: var(--font-ui-small);
+  color: var(--text-muted);
+}
+
+.draftmesh-auth-modal__form .setting-item {
+  border-top: none;
+  padding: var(--size-4-2) 0;
+}
+
+.draftmesh-auth-modal__code-input {
+  text-align: center;
+  font-family: var(--font-monospace);
+  letter-spacing: 0.35em;
+}
+
+.draftmesh-auth-modal__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--size-4-2);
+  margin-top: var(--size-4-4);
+}
+
+.draftmesh-auth-modal__actions--mobile {
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.draftmesh-auth-modal__actions--mobile > button {
+  min-height: 44px;
+}
+
+.draftmesh-auth-modal__secondary-btn {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin-top: var(--size-4-2);
+  min-height: 40px;
+  padding: var(--size-2-2) var(--size-4-3);
+  border: 1px solid var(--background-modifier-border);
+  border-radius: var(--button-radius, var(--radius-m));
+  background: var(--background-primary);
+  color: var(--text-muted);
+  font-size: var(--font-ui-small);
+  cursor: pointer;
+}
+
+.draftmesh-auth-modal__secondary-btn:hover {
+  color: var(--text-normal);
+  background: var(--background-modifier-hover);
+}
+
+/* Sync progress status bar + modal */
+.draftmesh-sync-status {
+  display: none;
+  align-items: center;
+  gap: var(--size-2-1);
+  margin-left: var(--size-4-2);
+  padding: var(--size-2-1) var(--size-2-2);
+  border-radius: var(--radius-m);
+  background: var(--background-modifier-hover);
+  cursor: pointer;
+  user-select: none;
+  line-height: 1;
+}
+
+.draftmesh-sync-status.is-visible {
+  display: inline-flex;
+}
+
+.draftmesh-sync-status:hover,
+.draftmesh-sync-status:focus-visible {
+  background: var(--background-modifier-hover);
+  outline: none;
+}
+
+.draftmesh-sync-status__ring-wrap {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  margin-inline-start: 2px;
+  --draftmesh-sync-ring-ease: cubic-bezier(0.4, 0.12, 0.6, 0.88);
+  --draftmesh-sync-ring-duration: 2.2s;
+  transition: filter 0.55s var(--draftmesh-sync-ring-ease);
+}
+
+.draftmesh-sync-status__ring {
+  display: block;
+}
+
+.draftmesh-sync-status__ring-bg {
+  stroke: #fff;
+}
+
+.draftmesh-sync-status__ring-halo {
+  stroke: var(--color-purple);
+  opacity: 0;
+  transition:
+    opacity 0.55s var(--draftmesh-sync-ring-ease),
+    stroke-width 0.55s var(--draftmesh-sync-ring-ease);
+}
+
+.draftmesh-sync-status__ring-fill {
+  stroke: var(--color-purple);
+  transition: opacity 0.55s var(--draftmesh-sync-ring-ease);
+}
+
+.draftmesh-sync-status__ring-wrap.is-syncing {
+  animation: draftmesh-sync-ring-outer-halo var(--draftmesh-sync-ring-duration) var(--draftmesh-sync-ring-ease)
+    infinite;
+}
+
+.draftmesh-sync-status__ring-wrap.is-syncing .draftmesh-sync-status__ring-halo {
+  animation: draftmesh-sync-ring-halo var(--draftmesh-sync-ring-duration) var(--draftmesh-sync-ring-ease)
+    infinite;
+}
+
+.draftmesh-sync-status__ring-wrap.is-syncing .draftmesh-sync-status__ring-fill {
+  animation: draftmesh-sync-ring-breathe var(--draftmesh-sync-ring-duration) var(--draftmesh-sync-ring-ease)
+    infinite;
+}
+
+.draftmesh-sync-status.is-complete .draftmesh-sync-status__ring-fill {
+  stroke: var(--color-purple);
+}
+
+@keyframes draftmesh-sync-ring-breathe {
+  0%,
+  100% {
+    opacity: 0.74;
+  }
+  38% {
+    opacity: 0.92;
+  }
+  52% {
+    opacity: 1;
+  }
+  68% {
+    opacity: 0.86;
+  }
+}
+
+@keyframes draftmesh-sync-ring-halo {
+  0%,
+  100% {
+    opacity: 0.1;
+    stroke-width: 2;
+  }
+  38% {
+    opacity: 0.22;
+    stroke-width: 2.3;
+  }
+  52% {
+    opacity: 0.42;
+    stroke-width: 2.75;
+  }
+  68% {
+    opacity: 0.2;
+    stroke-width: 2.3;
+  }
+}
+
+@keyframes draftmesh-sync-ring-outer-halo {
+  0%,
+  100% {
+    filter: drop-shadow(0 0 0.6px color-mix(in srgb, var(--color-purple) 26%, transparent));
+  }
+  38% {
+    filter: drop-shadow(0 0 1px color-mix(in srgb, var(--color-purple) 36%, transparent));
+  }
+  52% {
+    filter: drop-shadow(0 0 1.8px color-mix(in srgb, var(--color-purple) 48%, transparent))
+      drop-shadow(0 0 2.5px color-mix(in srgb, var(--color-purple) 22%, transparent));
+  }
+  68% {
+    filter: drop-shadow(0 0 1.1px color-mix(in srgb, var(--color-purple) 34%, transparent));
+  }
+}
+
+.draftmesh-sync-status__ring-wrap.is-hidden {
+  display: none;
+}
+
+.draftmesh-sync-status__offline-wrap {
+  display: none;
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  margin-inline-start: 2px;
+  color: var(--text-muted);
+}
+
+.draftmesh-sync-status__offline-wrap.is-visible {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.draftmesh-sync-status__offline-icon {
+  display: block;
+}
+
+.draftmesh-sync-status__offline-icon path {
+  fill: none;
+  stroke: currentColor;
+}
+
+/* titleEl sits outside contentEl; zero all gap between title and body */
+.modal.draftmesh-sync-progress-modal {
+  gap: 0;
+}
+
+.modal.draftmesh-sync-progress-modal .modal-title,
+.draftmesh-sync-progress-modal__title {
+  margin: 0;
+  padding: 0;
+}
+
+.draftmesh-sync-progress-modal__title-row {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--size-4-2);
+  max-width: 100%;
+}
+
+.draftmesh-sync-progress-modal__title-text {
+  flex-shrink: 0;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+}
+
+.draftmesh-sync-progress-modal__inventory-pill {
+  flex-shrink: 0;
+  padding: var(--size-2-2) var(--size-4-2);
+  border-radius: 9999px;
+  background-color: var(--background-modifier-hover);
+  font-size: var(--font-ui-small);
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+  color: var(--text-muted);
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.draftmesh-sync-progress-modal__inventory-pill.is-hidden {
+  display: none;
+}
+
+.modal.draftmesh-sync-progress-modal .modal-content {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.draftmesh-auth-modal.draftmesh-sync-progress-modal {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.draftmesh-sync-progress-modal__body {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.draftmesh-sync-section {
+  border: 1px solid var(--background-modifier-border);
+  border-radius: var(--radius-m);
+  background: var(--background-primary);
+  overflow: hidden;
+}
+
+.draftmesh-sync-section.is-hidden {
+  display: none;
+}
+
+.draftmesh-sync-section + .draftmesh-sync-section {
+  margin-top: var(--size-4-2);
+}
+
+.draftmesh-sync-section__toggle {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: var(--size-4-2);
+  width: 100%;
+  padding: var(--size-4-2) var(--size-4-3);
+  cursor: pointer;
+  user-select: none;
+}
+
+.draftmesh-sync-section__toggle:hover {
+  background: var(--background-modifier-hover);
+}
+
+.draftmesh-sync-section__title {
+  font-size: var(--font-ui-small);
+  font-weight: 700;
+  color: var(--text-normal);
+  white-space: nowrap;
+}
+
+.draftmesh-sync-section__summary {
+  min-width: 0;
+  font-size: var(--font-ui-smaller);
+  font-variant-numeric: tabular-nums;
+  color: var(--text-muted);
+  text-align: right;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.draftmesh-sync-section__chevron {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  color: var(--text-faint);
+}
+
+.draftmesh-sync-section__chevron svg {
+  width: 14px;
+  height: 14px;
+}
+
+.draftmesh-sync-section__body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-4-2);
+  padding: var(--size-4-2) var(--size-4-3) var(--size-4-3);
+  border-top: 1px solid var(--background-modifier-border);
+}
+
+.draftmesh-sync-section__body.is-hidden {
+  display: none;
+}
+
+.draftmesh-reconcile-progress {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-4-2);
+}
+
+.draftmesh-reconcile-progress.is-hidden {
+  display: none;
+}
+
+.draftmesh-reconcile-progress__header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--size-4-2);
+}
+
+.draftmesh-reconcile-progress__header-left {
+  font-size: var(--font-ui-small);
+  font-weight: 600;
+  color: var(--text-normal);
+}
+
+.draftmesh-reconcile-progress__header-right {
+  font-size: var(--font-ui-smaller);
+  font-variant-numeric: tabular-nums;
+  color: var(--text-faint);
+  white-space: nowrap;
+}
+
+.draftmesh-reconcile-progress__bar {
+  position: relative;
+  width: 100%;
+  height: 8px;
+  border-radius: 999px;
+  overflow: hidden;
+  background-color: var(--background-modifier-border);
+}
+
+.draftmesh-reconcile-progress__bar-fill {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  min-width: 0;
+  border-radius: 999px;
+  transition: width 0.25s ease;
+}
+
+.draftmesh-reconcile-progress__bar-fill.is-active {
+  animation: draftmesh-reconcile-pulse 1.2s ease-in-out infinite;
+}
+
+.draftmesh-reconcile-progress__bar-hits {
+  position: absolute;
+  inset: 0;
+}
+
+.draftmesh-reconcile-progress__bar-hit {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease;
+}
+
+.draftmesh-reconcile-progress__bar-hit.is-selected {
+  box-shadow: inset 0 0 0 2px color-mix(in srgb, var(--text-on-accent, #fff) 55%, transparent);
+  z-index: 1;
+}
+
+.draftmesh-reconcile-progress__swatch--scan_local {
+  background-color: #8b8b8b;
+}
+
+.draftmesh-reconcile-progress__swatch--pull_remote {
+  background-color: #8b5cf6;
+}
+
+.draftmesh-reconcile-progress__swatch--diff {
+  background-color: #22c55e;
+}
+
+.draftmesh-reconcile-progress__swatch--apply {
+  background-color: #d97706;
+}
+
+.draftmesh-reconcile-progress__swatch--upload {
+  background-color: #3b82f6;
+}
+
+@keyframes draftmesh-reconcile-pulse {
+  0%,
+  100% {
+    filter: brightness(1);
+  }
+  50% {
+    filter: brightness(1.18);
+  }
+}
+
+.draftmesh-reconcile-progress__legend {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-2-1);
+}
+
+.draftmesh-reconcile-progress__legend-row {
+  display: grid;
+  grid-template-columns: 12px 1fr auto;
+  align-items: center;
+  gap: var(--size-4-2);
+  font-size: var(--font-ui-smaller);
+  color: var(--text-muted);
+  border-radius: var(--radius-s);
+  padding: var(--size-2-1) var(--size-2-2);
+  margin-inline: calc(var(--size-2-2) * -1);
+  cursor: pointer;
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.draftmesh-reconcile-progress.has-selection .draftmesh-reconcile-progress__legend-row:not(.is-selected) {
+  opacity: 0.55;
+}
+
+.draftmesh-reconcile-progress__legend-row:hover {
+  background-color: var(--background-modifier-hover);
+}
+
+.draftmesh-reconcile-progress__legend-row.is-active {
+  color: var(--text-normal);
+  font-weight: 600;
+}
+
+.draftmesh-reconcile-progress__legend-row.is-done {
+  color: var(--text-muted);
+}
+
+.draftmesh-reconcile-progress__legend-row.is-selected {
+  opacity: 1 !important;
+  color: var(--text-normal);
+  font-weight: 600;
+  background-color: var(--background-modifier-hover);
+}
+
+.draftmesh-reconcile-progress__legend-row.is-selected .draftmesh-reconcile-progress__legend-duration {
+  color: var(--text-muted);
+}
+
+.draftmesh-reconcile-progress__swatch {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  flex-shrink: 0;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.draftmesh-reconcile-progress__legend-row.is-selected .draftmesh-reconcile-progress__swatch {
+  transform: scale(1.2);
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--text-normal) 22%, transparent);
+}
+
+.draftmesh-reconcile-progress__legend-duration {
+  font-variant-numeric: tabular-nums;
+  color: var(--text-faint);
+  white-space: nowrap;
+}
+
+.draftmesh-sync-progress-modal__progress.is-paused {
+  opacity: 0.72;
+}
+
+.draftmesh-live-sync-drift {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--size-4-2);
+  font-size: var(--font-ui-smaller);
+  font-variant-numeric: tabular-nums;
+}
+
+.draftmesh-live-sync-drift__item {
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.draftmesh-live-sync-drift__item--upload {
+  color: #3b82f6;
+}
+
+.draftmesh-live-sync-drift__item--download {
+  color: #14b8a6;
+}
+
+.draftmesh-live-sync-drift__item.is-zero {
+  opacity: 0.45;
+}
+
+.draftmesh-live-sync-drift.is-synced .draftmesh-live-sync-drift__item--upload,
+.draftmesh-live-sync-drift.is-synced .draftmesh-live-sync-drift__item--download {
+  color: #16a34a;
+  opacity: 1;
+}
+
+.draftmesh-live-sync-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-2-1);
+}
+
+.draftmesh-live-sync-list.is-hidden {
+  display: none;
+}
+
+.draftmesh-live-sync-list__row {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: var(--size-2-2);
+  min-width: 0;
+  font-size: var(--font-ui-small);
+}
+
+.draftmesh-live-sync-list__arrow {
+  font-weight: 700;
+}
+
+.draftmesh-live-sync-list__arrow--upload {
+  color: #3b82f6;
+}
+
+.draftmesh-live-sync-list__arrow--download {
+  color: #14b8a6;
+}
+
+.draftmesh-live-sync-list__name {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: var(--font-monospace);
+  color: var(--text-normal);
+}
+
+.draftmesh-live-sync-list__ago {
+  flex-shrink: 0;
+  font-size: var(--font-ui-smaller);
+  font-variant-numeric: tabular-nums;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+/* Debug log viewer — selectable log body (layout uses version-history-style modal) */
+.log-viewer-modal .log-viewer-level-filter select {
+  min-width: 5.5rem;
+  font-size: var(--font-ui-smaller);
+}
+
+.log-viewer-modal .log-viewer-content,
+.log-viewer-modal .log-text,
+.log-viewer-modal .log-lines,
+.log-viewer-modal .log-line,
+.log-viewer-modal .log-highlight {
+  user-select: text;
+  -webkit-user-select: text;
+  cursor: text;
+}
+
+.log-viewer-modal .log-text {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  resize: none;
+  overflow: hidden;
+  background: transparent;
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-family: var(--font-monospace);
+  font-size: var(--font-text-size);
+  line-height: var(--line-height-normal);
+  color: var(--text-normal);
+}
+
+.log-viewer-modal .log-line {
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-family: var(--font-monospace);
+  font-size: var(--font-text-size);
+  line-height: var(--line-height-normal);
+  color: var(--text-normal);
+  border-radius: var(--radius-s);
+  padding: 0 var(--size-2-1);
+}
+
+.log-viewer-modal .log-highlight {
+  background-color: var(--text-highlight-bg, var(--background-modifier-success));
+  color: var(--text-normal);
+  border-radius: 2px;
+}
+
+/* Vault sharing */
+.draftmesh-vault-manager__row-actions > button.draftmesh-vault-manager__share-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--size-2-1);
+  margin: 0;
+  color: var(--text-accent);
+  background: none;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  outline: none;
+  border-radius: var(--radius-s);
+  cursor: pointer;
+  -webkit-app-region: no-drag;
+}
+
+.draftmesh-vault-manager__row-actions > button.draftmesh-vault-manager__share-btn:hover,
+.draftmesh-vault-manager__row-actions > button.draftmesh-vault-manager__share-btn:focus-visible {
+  color: var(--text-accent);
+  background: none;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.draftmesh-vault-manager__share-btn svg {
+  width: var(--icon-m);
+  height: var(--icon-m);
+}
+
+.draftmesh-vault-share-desc {
+  color: var(--text-muted);
+  margin-block: 0 var(--size-4-2);
+}
+
+.draftmesh-vault-share-members h4 {
+  margin-block: var(--size-4-2) var(--size-2-3);
+}
+
+.draftmesh-vault-share-member {
+  display: flex;
+  align-items: center;
+  gap: var(--size-2-2);
+  padding-block: var(--size-2-2);
+  border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.draftmesh-vault-share-member-email {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.draftmesh-vault-share-member-badge {
+  font-size: var(--font-ui-smaller);
+  color: var(--text-muted);
+}
+
+.draftmesh-vault-share-revoke {
+  font-size: var(--font-ui-smaller);
+}
+
+/* Live collaboration (Relay-style cursors) */
+.cm-editor.draftmesh-collab-editor {
+  position: relative;
+}
+
+.draftmesh-collab-reading-view {
+  position: relative;
+}
+
+.draftmesh-collab-avatar-stack {
+  position: absolute;
+  top: var(--size-4-2);
+  right: calc(var(--size-4-6) + var(--size-4-4));
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 6px;
+  pointer-events: none;
+}
+
+.draftmesh-collab-avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 38px;
+  height: 38px;
+  padding: 2px;
+  border-radius: 999px;
+  flex-shrink: 0;
+  background: var(--background-primary);
+  box-shadow: 0 0 0 2px var(--draftmesh-collab-color, var(--text-accent));
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.draftmesh-collab-avatar__theme {
+  display: inline-flex;
+  width: 100%;
+  height: 100%;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.theme-light .draftmesh-collab-avatar__theme--dark,
+.theme-dark .draftmesh-collab-avatar__theme--light {
+  display: none;
+}
+
+.theme-dark .draftmesh-collab-avatar {
+  box-shadow:
+    0 0 0 2px var(--draftmesh-collab-color, var(--text-accent)),
+    0 2px 8px rgba(0, 0, 0, 0.28);
+}
+
+.draftmesh-collab-avatar svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+}
+
+.draftmesh-collab-cursor {
+  position: relative;
+  display: inline-block;
+  width: 0;
+  height: 1.15em;
+  margin-inline: 0;
+  pointer-events: none;
+  vertical-align: text-bottom;
+  overflow: visible;
+}
+
+.draftmesh-collab-cursor-caret {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  margin-left: -1.5px;
+  border-radius: 2px;
+  background-color: var(--draftmesh-collab-color);
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--background-primary) 70%, transparent);
+}
+
+.draftmesh-collab-cursor-label {
+  position: absolute;
+  left: 3px;
+  bottom: calc(100% + 2px + var(--draftmesh-collab-stack-offset, 0px));
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 112px;
+  min-height: 14px;
+  padding: 0 5px;
+  border-radius: 4px 4px 4px 1px;
+  background-color: color-mix(in srgb, var(--draftmesh-collab-color) 82%, black);
+  color: var(--text-on-accent, white);
+  font-family: var(--font-interface);
+  font-size: 9px;
+  font-weight: 600;
+  line-height: 12px;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  pointer-events: none;
+  box-shadow:
+    0 0 0 1px color-mix(in srgb, var(--background-primary) 78%, transparent),
+    0 1px 4px color-mix(in srgb, black 16%, transparent);
+  z-index: calc(20 + var(--draftmesh-collab-stack-index, 0));
+}
+
+.draftmesh-collab-cursor-label::before {
+  content: '';
+  position: absolute;
+  left: -3px;
+  bottom: var(--draftmesh-collab-stack-offset-negative, 0px);
+  width: 3px;
+  height: calc(2px + var(--draftmesh-collab-stack-offset, 0px));
+  border-radius: 1px 0 0 1px;
+  background-color: color-mix(in srgb, var(--draftmesh-collab-color) 82%, black);
+}
+
+.draftmesh-collab-selection {
+  background-color: color-mix(in srgb, var(--draftmesh-collab-color) 25%, transparent);
+}
+
+/* Keep the native caret visible when the editor is unfocused (collab awareness still broadcasts). */
+.cm-editor.draftmesh-collab-editor:not(.cm-focused) .cm-cursor,
+.cm-editor.draftmesh-collab-editor:not(.cm-focused) .cm-cursor-primary {
+  visibility: visible !important;
+}

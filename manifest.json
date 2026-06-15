@@ -1,0 +1,11 @@
+{
+  "id": "draftmesh-sync",
+  "name": "DraftMesh",
+  "version": "0.0.1-beta1",
+  "minAppVersion": "1.4.0",
+  "description": "POC sync plugin for Obsidian based on Yjs + HTTP",
+  "author": "DraftMesh Lab",
+  "isDesktopOnly": false,
+  "main": "main.js",
+  "styles": "styles.css"
+}
