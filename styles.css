@@ -1,4 +1,4 @@
-.nav-file-title.tree-item-self:has(> .draftmesh-share-badge) {
+.nav-file-title.tree-item-self.draftmesh-share-badge-parent {
   gap: var(--size-2-1);
 }
 
@@ -30,18 +30,12 @@ body.is-mobile .modal.draftmesh-mobile-sheet {
   --draftmesh-sheet-content-left: var(--draftmesh-sheet-padding-left);
   --draftmesh-sheet-title-top: 14px;
   --draftmesh-sheet-content-top: 16px;
-  --draftmesh-sheet-background: color-mix(
-    in srgb,
-    var(--background-secondary) 88%,
-    var(--text-normal) 12%
-  );
-  --draftmesh-sheet-surface: color-mix(
-    in srgb,
-    var(--background-primary) 82%,
-    var(--text-normal) 10%
-  );
-  --draftmesh-sheet-border: color-mix(in srgb, var(--text-normal) 14%, transparent);
-  --draftmesh-sheet-muted-border: color-mix(in srgb, var(--text-normal) 10%, transparent);
+  --draftmesh-sheet-background: var(--background-secondary);
+  --draftmesh-sheet-surface: var(--background-primary);
+  --draftmesh-sheet-control: var(--interactive-normal);
+  --draftmesh-sheet-control-hover: var(--background-modifier-hover);
+  --draftmesh-sheet-border: var(--background-modifier-border);
+  --draftmesh-sheet-muted-border: var(--background-modifier-border);
   --draftmesh-keyboard-inset: 0px;
   --draftmesh-keyboard-scroll-padding: 0px;
   --draftmesh-visual-viewport-height: 100dvh;
@@ -108,7 +102,7 @@ body.is-mobile .modal.draftmesh-mobile-sheet .modal-close-button {
   margin: 0;
   border-radius: 999px;
   color: var(--text-normal);
-  background: color-mix(in srgb, var(--draftmesh-sheet-surface) 86%, transparent);
+  background: var(--draftmesh-sheet-control-hover);
   transform: none;
 }
 
@@ -138,10 +132,6 @@ body.is-mobile .modal.draftmesh-mobile-sheet .modal-content {
 
 body.is-mobile.theme-dark .modal.draftmesh-mobile-sheet,
 html.theme-dark body.is-mobile .modal.draftmesh-mobile-sheet {
-  --draftmesh-sheet-background: #2c2f34;
-  --draftmesh-sheet-surface: #36393f;
-  --draftmesh-sheet-border: rgba(255, 255, 255, 0.13);
-  --draftmesh-sheet-muted-border: rgba(255, 255, 255, 0.09);
   box-shadow: none;
 }
 
@@ -275,6 +265,65 @@ body:not(.is-mobile) .modal.draftmesh-share-modal-shell {
   grid-column: 1 / -1;
 }
 
+body.theme-light
+  .modal.draftmesh-share-modal-shell
+  .draftmesh-share-modal__footer
+  > button:is(.draftmesh-share-modal__close-btn, .draftmesh-share-modal__revoke-btn),
+html.theme-light
+  body
+  .modal.draftmesh-share-modal-shell
+  .draftmesh-share-modal__footer
+  > button:is(.draftmesh-share-modal__close-btn, .draftmesh-share-modal__revoke-btn) {
+  border: 1px solid var(--background-modifier-border) !important;
+  background-color: #fff !important;
+  color: #111 !important;
+}
+
+body.theme-light
+  .modal.draftmesh-share-modal-shell
+  .draftmesh-share-modal__footer
+  > button.draftmesh-share-modal__revoke-btn,
+html.theme-light
+  body
+  .modal.draftmesh-share-modal-shell
+  .draftmesh-share-modal__footer
+  > button.draftmesh-share-modal__revoke-btn {
+  color: var(--text-error, #c62828) !important;
+}
+
+body.theme-light
+  .modal.draftmesh-share-modal-shell
+  .draftmesh-share-modal__footer
+  > button:is(.draftmesh-share-modal__close-btn, .draftmesh-share-modal__revoke-btn):hover,
+body.theme-light
+  .modal.draftmesh-share-modal-shell
+  .draftmesh-share-modal__footer
+  > button:is(.draftmesh-share-modal__close-btn, .draftmesh-share-modal__revoke-btn):focus-visible,
+html.theme-light
+  body
+  .modal.draftmesh-share-modal-shell
+  .draftmesh-share-modal__footer
+  > button:is(.draftmesh-share-modal__close-btn, .draftmesh-share-modal__revoke-btn):hover,
+html.theme-light
+  body
+  .modal.draftmesh-share-modal-shell
+  .draftmesh-share-modal__footer
+  > button:is(.draftmesh-share-modal__close-btn, .draftmesh-share-modal__revoke-btn):focus-visible {
+  background-color: #f5f5f5 !important;
+}
+
+body.theme-light
+  .modal.draftmesh-share-modal-shell
+  .draftmesh-share-modal__footer
+  > button:is(.draftmesh-share-modal__close-btn, .draftmesh-share-modal__revoke-btn):disabled,
+html.theme-light
+  body
+  .modal.draftmesh-share-modal-shell
+  .draftmesh-share-modal__footer
+  > button:is(.draftmesh-share-modal__close-btn, .draftmesh-share-modal__revoke-btn):disabled {
+  opacity: 0.65;
+}
+
 body.is-mobile .draftmesh-share-modal__section {
   margin-top: 0;
 }
@@ -406,11 +455,7 @@ body.is-mobile .draftmesh-share-mobile-group__title {
   margin: 0;
   border: 0 !important;
   border-radius: 999px;
-  background-color: color-mix(
-    in srgb,
-    var(--draftmesh-sheet-surface) 86%,
-    var(--text-normal) 14%
-  ) !important;
+  background-color: var(--draftmesh-sheet-control) !important;
   color: var(--text-normal) !important;
   box-shadow: none !important;
 }
@@ -422,22 +467,6 @@ body.is-mobile .draftmesh-share-mobile-group__title {
 
 .draftmesh-share-mobile-native-row__control select {
   padding-inline: var(--size-4-3) calc(var(--size-4-3) + 18px);
-}
-
-body:not(.theme-dark)
-  .modal.draftmesh-share-modal-shell.draftmesh-mobile-sheet
-  .draftmesh-share-mobile-native-row__control
-  :is(button, select),
-html.theme-light
-  body
-  .modal.draftmesh-share-modal-shell.draftmesh-mobile-sheet
-  .draftmesh-share-mobile-native-row__control
-  :is(button, select) {
-  background-color: color-mix(
-    in srgb,
-    var(--draftmesh-sheet-surface) 84%,
-    var(--text-normal) 16%
-  ) !important;
 }
 
 .draftmesh-settings .setting-item-heading .setting-item-control {
@@ -1323,6 +1352,23 @@ body.is-mobile .draftmesh-auth-modal__subtitle {
 .draftmesh-sync-status__ring-wrap.is-syncing .draftmesh-sync-status__ring-fill {
   animation: draftmesh-sync-ring-breathe var(--draftmesh-sync-ring-duration)
     var(--draftmesh-sync-ring-ease) infinite;
+}
+
+body.is-mobile .draftmesh-sync-status__ring-wrap,
+body.is-mobile .draftmesh-sync-status__ring-wrap.is-syncing,
+body.is-mobile .draftmesh-sync-status__ring-wrap.is-syncing .draftmesh-sync-status__ring-halo,
+body.is-mobile .draftmesh-sync-status__ring-wrap.is-syncing .draftmesh-sync-status__ring-fill {
+  animation: none;
+  transition: none;
+  filter: none;
+}
+
+body.is-mobile .draftmesh-sync-status__ring-halo {
+  display: none;
+}
+
+body.is-mobile .draftmesh-sync-status__ring-fill {
+  opacity: 1;
 }
 
 .draftmesh-sync-status.is-complete .draftmesh-sync-status__ring-fill {
