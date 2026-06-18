@@ -135,6 +135,53 @@ html.theme-dark body.is-mobile .modal.draftmesh-mobile-sheet {
   box-shadow: none;
 }
 
+body.is-mobile.theme-light .modal.draftmesh-mobile-sheet,
+html.theme-light body.is-mobile .modal.draftmesh-mobile-sheet {
+  --draftmesh-sheet-border: color-mix(in srgb, var(--text-muted) 28%, transparent);
+  --draftmesh-sheet-muted-border: color-mix(in srgb, var(--text-muted) 20%, transparent);
+  --draftmesh-sheet-control: var(--background-primary);
+  --draftmesh-sheet-control-hover: var(--background-modifier-hover);
+  --draftmesh-mobile-control-border: color-mix(in srgb, var(--text-muted) 34%, transparent);
+}
+
+body.is-mobile.theme-light .modal.draftmesh-mobile-sheet :is(input, textarea, select),
+html.theme-light body.is-mobile .modal.draftmesh-mobile-sheet :is(input, textarea, select) {
+  border: 1px solid var(--draftmesh-mobile-control-border) !important;
+  background-color: var(--background-primary) !important;
+  color: var(--text-normal) !important;
+  box-shadow: none !important;
+}
+
+body.is-mobile.theme-light
+  .modal.draftmesh-mobile-sheet
+  button:not(.clickable-icon):not(.mod-cta):not(.draftmesh-vault-manager__share-btn),
+html.theme-light
+  body.is-mobile
+  .modal.draftmesh-mobile-sheet
+  button:not(.clickable-icon):not(.mod-cta):not(.draftmesh-vault-manager__share-btn) {
+  border: 1px solid var(--draftmesh-mobile-control-border) !important;
+  background-color: var(--background-primary) !important;
+  color: var(--text-normal) !important;
+  box-shadow: none !important;
+}
+
+body.is-mobile.theme-light
+  .modal.draftmesh-mobile-sheet
+  button:not(.clickable-icon):not(.mod-cta):not(.draftmesh-vault-manager__share-btn):hover,
+body.is-mobile.theme-light
+  .modal.draftmesh-mobile-sheet
+  button:not(.clickable-icon):not(.mod-cta):not(.draftmesh-vault-manager__share-btn):focus-visible,
+html.theme-light
+  body.is-mobile
+  .modal.draftmesh-mobile-sheet
+  button:not(.clickable-icon):not(.mod-cta):not(.draftmesh-vault-manager__share-btn):hover,
+html.theme-light
+  body.is-mobile
+  .modal.draftmesh-mobile-sheet
+  button:not(.clickable-icon):not(.mod-cta):not(.draftmesh-vault-manager__share-btn):focus-visible {
+  background-color: var(--background-modifier-hover) !important;
+}
+
 /* Share markdown modal */
 body:not(.is-mobile) .modal.draftmesh-share-modal-shell {
   width: min(480px, 92vw);
@@ -250,7 +297,6 @@ body:not(.is-mobile) .modal.draftmesh-share-modal-shell {
   padding: var(--size-4-3) var(--draftmesh-sheet-padding-right)
     calc(var(--size-4-3) + 20px + env(safe-area-inset-bottom, 0px))
     var(--draftmesh-sheet-padding-left);
-  border-top: 1px solid var(--draftmesh-sheet-muted-border);
   background: var(--draftmesh-sheet-background);
   backdrop-filter: none;
 }
@@ -942,6 +988,7 @@ body:not(.is-mobile) .modal.draftmesh-vault-manager-modal {
   box-sizing: border-box;
   min-height: 30px;
   padding: 6px 12px;
+  border: 1px solid var(--background-modifier-border);
   background-color: var(--background-modifier-hover);
   box-shadow: none;
 }
@@ -963,8 +1010,31 @@ body:not(.is-mobile) .modal.draftmesh-vault-manager-modal {
 }
 
 .draftmesh-vault-manager__action-btn--connected {
+  border-color: color-mix(in srgb, var(--color-purple) 36%, var(--background-modifier-border));
   color: var(--color-purple);
   cursor: default;
+}
+
+body.is-mobile.theme-light .draftmesh-vault-manager__action-btn,
+html.theme-light body.is-mobile .draftmesh-vault-manager__action-btn {
+  border-color: var(
+    --draftmesh-mobile-control-border,
+    color-mix(in srgb, var(--text-muted) 34%, transparent)
+  );
+  background-color: var(--background-primary);
+}
+
+body.is-mobile.theme-light .draftmesh-vault-manager__action-btn--connect:hover,
+body.is-mobile.theme-light .draftmesh-vault-manager__action-btn--connect:focus-visible,
+html.theme-light body.is-mobile .draftmesh-vault-manager__action-btn--connect:hover,
+html.theme-light body.is-mobile .draftmesh-vault-manager__action-btn--connect:focus-visible {
+  background-color: var(--background-modifier-hover);
+}
+
+body.is-mobile.theme-light .draftmesh-vault-manager__action-btn--connected,
+html.theme-light body.is-mobile .draftmesh-vault-manager__action-btn--connected {
+  border-color: color-mix(in srgb, var(--color-purple) 42%, var(--background-modifier-border));
+  background-color: color-mix(in srgb, var(--color-purple) 8%, var(--background-primary));
 }
 
 .draftmesh-vault-manager__storage-header {
@@ -1074,8 +1144,8 @@ body.is-mobile .draftmesh-vault-manager__storage-header {
 body.is-mobile .draftmesh-vault-manager__list {
   flex: 1 1 auto;
   min-height: 0;
-  margin: 0;
-  padding-bottom: var(--size-2-3);
+  margin: 0 calc(-1 * var(--draftmesh-sheet-padding-right)) 0 0;
+  padding: 0 var(--draftmesh-sheet-padding-right) var(--size-2-3) 0;
   overflow-x: hidden;
   overflow-y: auto;
   overscroll-behavior: contain;
@@ -1086,7 +1156,6 @@ body.is-mobile .draftmesh-vault-manager__create {
   flex: 0 0 auto;
   margin: 0;
   padding: var(--size-2-3) 0 env(safe-area-inset-bottom, 0px);
-  border-top: 1px solid var(--draftmesh-sheet-muted-border);
   background: var(--draftmesh-sheet-background);
   backdrop-filter: none;
 }
