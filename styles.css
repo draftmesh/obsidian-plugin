@@ -31,6 +31,7 @@ body.is-mobile .modal.draftmesh-mobile-sheet {
   --draftmesh-sheet-title-top: 14px;
   --draftmesh-sheet-content-top: 16px;
   --draftmesh-keyboard-inset: 0px;
+  --draftmesh-keyboard-scroll-padding: 0px;
   --draftmesh-visual-viewport-height: 100dvh;
   position: absolute;
   inset: auto 0 var(--draftmesh-keyboard-inset);
@@ -99,12 +100,18 @@ body.is-mobile .modal.draftmesh-mobile-sheet .modal-content {
   max-height: none;
   margin: 0;
   padding: var(--draftmesh-sheet-content-top) var(--draftmesh-sheet-padding-right)
-    calc(var(--size-4-4) + env(safe-area-inset-bottom, 0px)) var(--draftmesh-sheet-content-left);
+    calc(
+      var(--size-4-4) + env(safe-area-inset-bottom, 0px) + var(--draftmesh-keyboard-scroll-padding)
+    )
+    var(--draftmesh-sheet-content-left);
   border-top: 0;
   box-shadow: none;
   overflow-x: hidden;
   overflow-y: auto;
   overscroll-behavior: contain;
+  scroll-padding-bottom: calc(
+    var(--size-4-4) + env(safe-area-inset-bottom, 0px) + var(--draftmesh-keyboard-scroll-padding)
+  );
   -webkit-overflow-scrolling: touch;
   box-sizing: border-box;
 }
@@ -1203,7 +1210,9 @@ body.is-mobile .draftmesh-vault-form-actions > button {
 body.is-mobile .modal.draftmesh-mobile-sheet .modal-content.draftmesh-auth-modal {
   padding-top: var(--draftmesh-sheet-content-top);
   padding-right: var(--draftmesh-sheet-padding-right);
-  padding-bottom: calc(var(--size-4-4) + env(safe-area-inset-bottom, 0px));
+  padding-bottom: calc(
+    var(--size-4-4) + env(safe-area-inset-bottom, 0px) + var(--draftmesh-keyboard-scroll-padding)
+  );
   padding-left: var(--draftmesh-sheet-content-left);
 }
 
