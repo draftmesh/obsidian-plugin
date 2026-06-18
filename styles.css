@@ -320,9 +320,14 @@ html.theme-light
   .modal.draftmesh-share-modal-shell
   .draftmesh-share-modal__footer
   > button:is(.draftmesh-share-modal__close-btn, .draftmesh-share-modal__revoke-btn) {
-  border: 1px solid var(--background-modifier-border) !important;
+  border: 1px solid color-mix(in srgb, var(--text-muted) 28%, transparent) !important;
+  background: #fff !important;
+  background-image: none !important;
   background-color: #fff !important;
   color: #111 !important;
+  box-shadow: none !important;
+  filter: none !important;
+  transform: none !important;
 }
 
 body.theme-light
@@ -355,7 +360,13 @@ html.theme-light
   .modal.draftmesh-share-modal-shell
   .draftmesh-share-modal__footer
   > button:is(.draftmesh-share-modal__close-btn, .draftmesh-share-modal__revoke-btn):focus-visible {
+  border-color: color-mix(in srgb, var(--text-muted) 34%, transparent) !important;
+  background: #f5f5f5 !important;
+  background-image: none !important;
   background-color: #f5f5f5 !important;
+  box-shadow: none !important;
+  filter: none !important;
+  transform: none !important;
 }
 
 body.theme-light
@@ -368,6 +379,9 @@ html.theme-light
   .draftmesh-share-modal__footer
   > button:is(.draftmesh-share-modal__close-btn, .draftmesh-share-modal__revoke-btn):disabled {
   opacity: 0.65;
+  box-shadow: none !important;
+  filter: none !important;
+  transform: none !important;
 }
 
 body.is-mobile .draftmesh-share-modal__section {
