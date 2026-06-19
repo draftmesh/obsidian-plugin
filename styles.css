@@ -1581,6 +1581,10 @@ body.is-mobile .draftmesh-sync-status__ring-fill {
   display: none;
 }
 
+body.is-mobile .draftmesh-sync-progress-modal__inventory-pill {
+  display: none;
+}
+
 .modal.draftmesh-sync-progress-modal .modal-content {
   margin-top: 0;
   padding-top: 0;
