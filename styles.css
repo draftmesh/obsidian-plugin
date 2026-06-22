@@ -1941,6 +1941,10 @@ body.is-mobile .draftmesh-sync-progress-modal__inventory-pill {
 }
 
 /* Debug log viewer — selectable log body (layout uses version-history-style modal) */
+.log-viewer-modal .log-viewer-actions .clickable-icon {
+  flex: 0 0 auto;
+}
+
 .log-viewer-modal .log-viewer-level-filter select {
   min-width: 5.5rem;
   font-size: var(--font-ui-smaller);
@@ -1960,11 +1964,8 @@ body.is-mobile .draftmesh-sync-progress-modal__inventory-pill {
   display: block;
   width: 100%;
   margin: 0;
-  padding: 0;
-  border: none;
-  outline: none;
-  resize: none;
-  overflow: hidden;
+  padding: 0 var(--size-2-1);
+  box-sizing: border-box;
   background: transparent;
   white-space: pre-wrap;
   word-break: break-word;
@@ -1989,6 +1990,85 @@ body.is-mobile .draftmesh-sync-progress-modal__inventory-pill {
   background-color: var(--text-highlight-bg, var(--background-modifier-success));
   color: var(--text-normal);
   border-radius: 2px;
+}
+
+body.is-mobile .modal.log-viewer-modal.draftmesh-mobile-sheet .modal-title {
+  width: calc(
+    100% - var(--draftmesh-sheet-content-left) - 188px - env(safe-area-inset-right, 0px)
+  ) !important;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+body.is-mobile .modal.log-viewer-modal.draftmesh-mobile-sheet .modal-content {
+  padding: 0 !important;
+}
+
+body.is-mobile .modal.log-viewer-modal.draftmesh-mobile-sheet .log-viewer-header {
+  padding: 52px var(--draftmesh-sheet-padding-right) var(--size-4-2)
+    var(--draftmesh-sheet-padding-left) !important;
+  background: var(--draftmesh-sheet-background);
+}
+
+body.is-mobile
+  .modal.log-viewer-modal.draftmesh-mobile-sheet
+  .log-viewer-header
+  .view-header-title {
+  display: none;
+}
+
+body.is-mobile .modal.log-viewer-modal.draftmesh-mobile-sheet .log-viewer-actions {
+  position: absolute;
+  inset: 6px calc(max(8px, env(safe-area-inset-right, 0px)) + 48px) auto auto;
+  z-index: 4;
+  margin-right: 0 !important;
+  gap: var(--size-2-1) !important;
+}
+
+body.is-mobile .modal.log-viewer-modal.draftmesh-mobile-sheet .log-viewer-actions .clickable-icon {
+  width: 40px;
+  height: 40px;
+  border: 1px solid color-mix(in srgb, var(--text-muted) 34%, var(--draftmesh-sheet-border));
+  color: var(--text-normal);
+  background: color-mix(in srgb, var(--background-primary) 88%, var(--text-normal) 12%);
+  border-radius: 999px;
+  box-shadow: none;
+}
+
+body.is-mobile
+  .modal.log-viewer-modal.draftmesh-mobile-sheet
+  .log-viewer-actions
+  .clickable-icon:hover,
+body.is-mobile
+  .modal.log-viewer-modal.draftmesh-mobile-sheet
+  .log-viewer-actions
+  .clickable-icon:focus-visible {
+  background: color-mix(in srgb, var(--background-primary) 78%, var(--text-normal) 22%);
+  border-color: color-mix(in srgb, var(--text-muted) 48%, var(--draftmesh-sheet-border));
+}
+
+body.is-mobile .modal.log-viewer-modal.draftmesh-mobile-sheet .log-viewer-search {
+  padding: var(--size-4-2) var(--draftmesh-sheet-padding-right) var(--size-4-2)
+    var(--draftmesh-sheet-padding-left) !important;
+}
+
+body.is-mobile .modal.log-viewer-modal.draftmesh-mobile-sheet .log-viewer-search-nav,
+body.is-mobile .modal.log-viewer-modal.draftmesh-mobile-sheet .log-viewer-match-status {
+  display: none !important;
+}
+
+body.is-mobile .modal.log-viewer-modal.draftmesh-mobile-sheet .log-viewer-content {
+  padding: var(--size-4-2) calc(var(--size-4-2) + env(safe-area-inset-right, 0px))
+    calc(var(--size-4-4) + env(safe-area-inset-bottom, 0px))
+    calc(var(--size-4-2) + env(safe-area-inset-left, 0px)) !important;
+}
+
+body.is-mobile .modal.log-viewer-modal.draftmesh-mobile-sheet .log-text,
+body.is-mobile .modal.log-viewer-modal.draftmesh-mobile-sheet .log-line {
+  padding-inline: 0;
+  font-size: 13px;
+  line-height: 1.4;
 }
 
 /* Vault sharing */
